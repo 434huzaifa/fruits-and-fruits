@@ -19,6 +19,7 @@
         extend: {
           colors: {
             tomato: "#F85559",
+            pink: "#F85559",
           },
         },
       },
@@ -29,42 +30,89 @@
 <body>
   <header>
     <nav
-      class="lg:bg-tomato px-5 lg:mx-60 lg:mt-12 lg:px-14 lg:rounded-[37.5rem] flex flex-row justify-between items-center lg:text-white text-black">
+      class="lg:bg-tomato px-5 lg:mx-60 mt-12 lg:px-14 lg:rounded-[37.5rem] flex flex-row justify-between items-center lg:text-white text-black">
       <ul class="lg:flex gap-7 font-medium text-2xl hidden">
         <li>Home</li>
         <li>About Us</li>
         <li>Shop</li>
         <li>All Fruits</li>
       </ul>
-      <div class="flex items-center gap-2 lg:gap-4 font-bold my-9">
+      <div class="flex items-center gap-2 lg:gap-4 font-bold lg:my-9">
         <div>
           <img class="w-7 lg:w-auto" src="assets/logo.png" alt="" />
         </div>
         <span class="lg:text-5xl text-lg font-bold">Fruit Burst</span>
       </div>
       <div class="dropdown dropdown-end lg:hidden bg-white w-auto">
-        <label tabindex="0" class="btn m-1 bg-white border-none hover:bg-transparent ">
-          <i class="fa-solid fa-bars" style="color: #000000;"></i></label>
+        <label tabindex="0" class="btn m-1 bg-white border-none hover:bg-transparent">
+          <i class="fa-solid fa-bars" style="color: #000000"></i></label>
         <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-white text-xl rounded-box">
           <li>Home</li>
           <li>About Us</li>
           <li>Shop</li>
           <li>All Fruits</li>
-          <li >
-            <div class="bg-white rounded-lg flex justify-between items-center px-1 py-1 hover:bg-transparent ">
-              <input type="text" placeholder="Search here" class="bg-white outline-none border-none text-black text-xl" />
-              <i class="fa-solid fa-magnifying-glass " style="color: #000000"></i>
+          <li>
+            <div class="bg-white rounded-lg flex justify-between items-center px-1 py-1 hover:bg-transparent">
+              <input type="text" placeholder="Search here"
+                class="bg-white outline-none border-none text-black text-xl" />
+              <i class="fa-solid fa-magnifying-glass" style="color: #000000"></i>
             </div>
           </li>
         </ul>
       </div>
-
       <div class="bg-white py-5 px-7 rounded-[3.5rem] w-96 lg:flex justify-between items-center hidden">
         <input type="text" placeholder="Search here" class="bg-white outline-none text-black" />
         <i class="fa-solid fa-magnifying-glass w-6" style="color: #000000"></i>
       </div>
     </nav>
   </header>
+  <main>
+    <section class="lg:mx-60 mt-8 mx-5 h-48 lg:h-auto lg:mt-12 relative ">
+      <div class="carousel w-full h-48 lg:h-auto rounded-lg ">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="assets/banner1.png" class="w-full" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#121212FF] to-[#12121200] w-full"></div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-0 right-0 lg:left-5 lg:right-5 top-1/2">
+            <a href="#slide4" class="btn btn-circle lg:scale-100 scale-75  bg-[#121212]">❮</a>
+            <a href="#slide2" class="btn btn-circle lg:scale-100 scale-75  bg-[#121212]">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="assets/banner2.png" class="w-full" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#121212FF] to-[#12121200] w-full"></div>
+          <div class="absolute flex justify-between transform -translate-y-1/2  left-0 right-0 lg:left-5 lg:right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle lg:scale-100 scale-75 bg-[#121212]">❮</a>
+            <a href="#slide3" class="btn btn-circle lg:scale-100 scale-75 bg-[#121212]">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <img src="assets/banner3.png" class="w-full" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#121212FF] to-[#12121200] w-full"></div>
+          <div class="absolute flex justify-between transform -translate-y-1/2  left-0 right-0 lg:left-5 lg:right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle lg:scale-100 scale-75 bg-[#121212]">❮</a>
+            <a href="#slide4" class="btn btn-circle lg:scale-100 scale-75 bg-[#121212]">❯</a>
+          </div>
+        </div>
+        <div id="slide4" class="carousel-item relative w-full">
+          <img src="assets/banner4.png" class="w-full" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#121212FF] to-[#12121200] w-full"></div>
+          <div class="absolute flex justify-between transform -translate-y-1/2  left-0 right-0 lg:left-5 lg:right-5 top-1/2">
+            <a href="#slide3" class="btn btn-circle lg:scale-100 scale-75 bg-[#121212]">❮</a>
+            <a href="#slide1" class="btn btn-circle lg:scale-100  scale-75 bg-[#121212]">❯</a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute lg:left-40 left-10 right-10 lg:right-40 top-0 bottom-0   lg:pt-20 flex flex-col lg:gap-8 lg:justify-start justify-center items-center  text-center text-white rounded-lg ">
+        
+          <h6 class="lg:text-7xl text-2xl font-extrabold">Exotic tastes at your <br />doorstep</h6>
+          <p class="lg:text-xl text-sm font-normal lg:font-medium">We supply highly quality organic products</p>
+          <button class=" bg-pink text-white py-2 lg:py-5 px-5 lg:px-7 text-xl lg:text-xl font-bold lg:font-extrabold rounded-md lg:rounded-lg">Shop Now</button>
+      </div>
+      <div>
+
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>
