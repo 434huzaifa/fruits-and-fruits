@@ -1,13 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <title>Wow Fruits</title>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/3d14713739.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+
+  <title>Wow Fruits</title>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            tomato: "#F85559",
+          },
+        },
+      },
+    };
+  </script>
 </head>
+
 <body>
-    
+  <header>
+    <nav
+      class="lg:bg-tomato px-5 lg:mx-60 lg:mt-12 lg:px-14 lg:rounded-[37.5rem] flex flex-row justify-between items-center lg:text-white text-black">
+      <ul class="lg:flex gap-7 font-medium text-2xl hidden">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Shop</li>
+        <li>All Fruits</li>
+      </ul>
+      <div class="flex items-center gap-2 lg:gap-4 font-bold my-9">
+        <div>
+          <img class="w-7 lg:w-auto" src="assets/logo.png" alt="" />
+        </div>
+        <span class="lg:text-5xl text-lg font-bold">Fruit Burst</span>
+      </div>
+      <div class="dropdown dropdown-end lg:hidden bg-white w-auto">
+        <label tabindex="0" class="btn m-1 bg-white border-none hover:bg-transparent ">
+          <i class="fa-solid fa-bars" style="color: #000000;"></i></label>
+        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-white text-xl rounded-box">
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Shop</li>
+          <li>All Fruits</li>
+          <li >
+            <div class="bg-white rounded-lg flex justify-between items-center px-1 py-1 hover:bg-transparent ">
+              <input type="text" placeholder="Search here" class="bg-white outline-none border-none text-black text-xl" />
+              <i class="fa-solid fa-magnifying-glass " style="color: #000000"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-white py-5 px-7 rounded-[3.5rem] w-96 lg:flex justify-between items-center hidden">
+        <input type="text" placeholder="Search here" class="bg-white outline-none text-black" />
+        <i class="fa-solid fa-magnifying-glass w-6" style="color: #000000"></i>
+      </div>
+    </nav>
+  </header>
 </body>
+
 </html>
